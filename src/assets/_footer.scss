@@ -1,0 +1,35 @@
+@import "assets/variables.scss";
+
+.footer {
+    padding: 22px 0;
+    background-color: $secondary;
+    .navbar {
+        justify-content: space-between;
+        padding: 0;
+    }
+    .nav-item {
+        padding: 8px;
+    }
+    .nav-link {
+        font-size: 14px;
+        letter-spacing: 0px;
+        color: $headingColor;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 0;
+        border-bottom: 1px solid transparent;
+        &:hover {
+            border-bottom: 1px solid black;
+        }
+    }
+    span {
+        font-size: 15px;
+        letter-spacing: -.2px;
+        line-height: 22px;
+        color: $bodyColor;
+        font-family: 'Open Sans';
+        font-weight: 400;
+    }
+}
+  

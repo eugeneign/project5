@@ -1,0 +1,139 @@
+@import "assets/variables.scss";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/utilities";
+@import "assets/mixins.scss";
+@import "assets/cards.scss";
+@import "assets/header.scss";
+@import "assets/hero.scss";
+@import "assets/footer.scss";
+@import "assets/side-menu.scss";
+
+body {
+  font: 15px/1.5 "Montserrat", sans-serif;
+	margin: 0;
+	min-width: 320px;
+  letter-spacing: .3px;
+  color: $bodyColor;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1032px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 $padding * 2;
+}
+
+a, button, label {
+	cursor: pointer;
+}
+
+h2 {
+  font-size: 52px;
+  letter-spacing: 2px;
+  color: $headingColor;
+  font-family: "Open Sans";
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 16px;
+  letter-spacing: .3px;
+  color: $headingColor;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.page {
+  overflow-x: hidden;
+  position: relative;
+  transition: transform .5s cubic-bezier(.77,.2,.05,1.0);
+  &.show {
+    overflow-x: visible;
+    transform: translateX(-250px);
+    transition: transform .5s cubic-bezier(.77,.2,.05,1.0);
+    &:before {
+      display: block;
+      opacity: .7;
+    }
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    background: black;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+  }
+}
+
+.info {
+  padding: 70px  0 $padding *6;
+  h2 {
+    margin-bottom: 50px;
+  }
+  label {
+    margin-bottom: 18px;
+    font-size: 16px;
+    letter-spacing: .3px;
+    color: $headingColor;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .btn {
+    background-color: $btnColor;
+    color: $primary;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: "Open Sans";
+    font-weight: 700;
+    text-align: center;
+    width: 150px;
+    text-transform: uppercase;
+    &:hover {
+      background-color: $btnColorHover;
+    }
+  }
+  &-list {
+    justify-content: space-between;
+    margin-bottom: $margin * 7;
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+    &-item {
+      width: 31%;
+      @include mobile {
+        width: 100%
+      }
+    }
+  }
+  .input-group {
+    max-width: 477px;
+    input {
+      height: 40px;
+      background-color: $secondary;
+    }
+  }
+}
+
+
+
+
+
+
